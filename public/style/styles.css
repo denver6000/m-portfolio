@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    height: 100vh;
+    display: flex;
+}
+
+.toggle-btn{
+    height: 50px;
+    width: 50px;
+    background-image: url('../res/burger-icon.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 500;
+    background-color: lightblue;
+    position: fixed;
+    border-radius: 10px;
+    top: 3%;
+    left: 2%;
+}
+
+.hidden {
+    opacity: 0;
+    transition-duration: .2s;
+    visibility: hidden;
+}
+
+.transparent {
+    opacity: 0;
+    transition-duration: .2s;
+}
+
+.expand{
+    min-width: 300px;
+    height: 100vh;
+    transition-duration: .5s;
+}
+
+.contract{
+    width: 0px;
+    height: 100vh;
+    transition-duration: .5s;
+}
+
+.signup-wrapper, .login-wrapper{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-wrapper .signup, .login-wrapper .login{
+    height: 300px;
+    width: 300px;
+}
+
+.signup-wrapper .signup{
+    background-color: limegreen;
+}
+
+.login-wrapper .login{
+    background-color: aquamarine;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: transparent;
+}
+
+.sidebar .menu{
+    height: 100%;
+    background-color: lightyellow;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar .menu .menu-item{
+    list-style-type: none;
+    /* border: 1px solid black; */
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #A7C7E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px 5px 0px darkblue;
+    margin: 10px;
+}
+
+.sidebar .menu .menu-item a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 1.2em;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+.content {
+    flex-grow: 1;
+}
+
+.content .sub-content{
+    height: 100vh;
+    width: 100%;
+}
+
+#home{
+    background-color: #A7C7E7;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#home .page-wrapper p{
+    font-size: medium;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 7px;
+}
+
+#home .page-wrapper .portfolio-page{
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #00008B;
+    box-shadow: -7px 9px 0px #00008B;
+}
+
+
+#home .portfolio-page:nth-child(n){
+    background-image: url('../res/cat.jpg');
+}
+
+#about-us{
+    background-color: brown;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+#about-us p{
+    text-align: justify;
+    width: 50%;
+    font-size: 1.1em;
+    line-height: 25px;
+    color: white;
+    text-indent: 50px;
+}
+
+#about-us h1{
+    font-size: 3em;
+    color: white;
+}
+
+#contact-us{
+    background-color: coral;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#contact-us .paragraph-wrapper{
+    width: 60%;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+}
+
+#contact-us .paragraph-wrapper p{
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 1.1em;
+    line-height: 25px;
+}
+
+#contact-us .paragraph-wrapper h1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 3em;
+}
+
+#contact-us .form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+#contact-us .form-wrapper h3{
+    font-family: 'Poppins', sans-serif;
+    opacity: .6;
+}
+
+#contact-us .form-wrapper input[type = text], #contact-us .form-wrapper button{
+    width: 80%;
+    height: 50px;
+    margin: 15px;
+    box-shadow: -8px 10px 0px #8B4000;
+}
+
+#contact-us .form-wrapper input[type = text]{
+    border-radius: 0px;
+    border: 2px solid #8B4000;
+    border-radius: 4px;
+    padding: 3px;
+    padding-left: 7px;
+}
+
+#contact-us .form-wrapper button{
+    border-radius: 0px;
+    border: 2px solid #8B4000;
+    border-radius: 4px;
+    background-color: #FAC898;
+}
+
+@media only screen and (max-width: 1000px) {
+    #home .page-wrapper .portfolio-page{
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px ) {
+
+    #home{
+        flex-direction: column;
+    }
+
+    #about-us p{
+        width: 80%;
+        font-size: 1.6em;
+        line-height: 50px;
+    }
+    
+    
+    #contact-us{
+        flex-direction: column;
+    }
+
+    .expand{
+        width: 100%;
+    }
+    
+}
